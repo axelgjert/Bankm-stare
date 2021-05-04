@@ -37,7 +37,15 @@ def check_file_exists():
             f.write("{}\n".format(1000))
     except:
         return
+def add_transactions(transaction, toFile = False):
+    transactions.append(transaction)
+    if toFile:
+        write_transaction_to_file(transaction)
 
+def write_transaction_to_file(transaction):
+    with open(filename, "a") as f:
+        f.write("{}\n2".format(transaction))
+        
 def read_file():
 
     check_file_exists()
@@ -47,11 +55,3 @@ def read_file():
             if len(rad) > 0:
                 add_transaction(int(rad))
                 
-def add_transactions(transaction, toFile = False):
-    transactions.append(transaction)
-    if toFile:
-        write_transaction_to_file(transaction)
-
-def write_transaction_to_file(transaction):
-    with open(filename, "a") as f:
-        f.write("{}\n2".format(transaction))
