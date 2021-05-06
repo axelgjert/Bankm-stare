@@ -33,7 +33,7 @@ while True:
         if withdraw <= balance() and withdraw >= 0:
             add_transaction(-withdraw, True)
         elif withdraw < 0:
-            print("USttaget måste vara större än 0.")
+            print("Uttaget måste vara större än 0.")
         else:
             print("Uttaget får inte vara större än saldot. Uttag medges ej.")
         
