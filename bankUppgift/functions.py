@@ -7,7 +7,7 @@ def balance():
     return balance
 
 def validate_int(output, error_mess):
-    while true:
+    while True:
         try:
             value = int(input(output))
             break
@@ -19,7 +19,7 @@ def print_transactions():
     line = 0
     balance = 0
     output = ("\nAlla tranaktioner:"
-              "\n{:>12} {:>12}"
+              "\n{:>3} {:>12} {:>12}"
               "\n------------------------").format ("Nr", "Händelse", "Saldo")
     for t in transactions:
         line += 1

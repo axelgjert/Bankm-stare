@@ -1,23 +1,23 @@
 from functions import *
 read_file()
 
-
 while True:
-    meny = ("\n#######################"
-            "\n# Lilla bankens meny"
+    meny = ("\n#####################"
+            "\n# Bankens meny"
             "\n# Saldo: {} kr"
-            "\n#######################"
+            "\n#####################"
             "\n1. Visa transaktioner"
             "\n2. Gör en insättning"
             "\n3. Gör ett uttag"
             "\n4. Nollställ kontot"
             "\n0. Avsluta programmet"
-            "\nGör ditt val: ").format(balance())
+            "\nVad vill du göra?: ").format(balance())
 
-    val = valdidate_int(meny, "Felaktig inmatning! ")
+    val = validate_int(meny, "Felaktig inmatning! ")
 
     if val == 0:
-        breakpoint
+        break
+
     elif val == 1:
         print(print_transactions())
 
@@ -40,7 +40,7 @@ while True:
     elif val == 4:
         os.remove(filename)
         transactions.clear()
-        read_file
+        read_file()
 
     else:
         print("felaktigt val!")

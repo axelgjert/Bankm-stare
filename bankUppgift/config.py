@@ -1,3 +1,3 @@
 import os
-transaction = []
+transactions = []
 filename = "transactions.txt"
